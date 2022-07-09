@@ -1,0 +1,10 @@
+version: '3'
+services:
+  frontend:
+    [...]
+  todobeck:
+    image: todobackend
+    ports: 
+      - 3001
+  database:
+    [...]
