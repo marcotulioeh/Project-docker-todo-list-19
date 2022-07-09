@@ -12,5 +12,10 @@ services:
     image: todobackend
     ports: 
       - 3001
-  database:
-    [...]
+  todotests:
+    image: todotests
+    depends_on:
+      - todofrontend
+      - todobackend
+      environment:
+        - FRONT_HOST=todofrontend
